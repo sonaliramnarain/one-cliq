@@ -1,5 +1,9 @@
 class Agenda < ApplicationRecord
-  belongs_to :teacher_id
-  belongs_to :subject_id
-  belongs_to :class_id
+  belongs_to :teacher
+  belongs_to :subject
+  belongs_to :class
+
+ validates :date,
+ validates :start_time,
+ validates :end_time
 end
