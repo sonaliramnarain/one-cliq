@@ -1,4 +1,4 @@
 class Student < ApplicationRecord
- belongs_to :parent
- has_many :classroom, :teacher, :attendance
+ belongs_to :parent, :classroom
+ has_many :teacher, :attendance
 end
