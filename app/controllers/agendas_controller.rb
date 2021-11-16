@@ -14,7 +14,7 @@ class AgendasController < ApplicationController
   end
 
  def destroy
-    @genda = Agenda.find(params[:id])
+    @agenda = Agenda.find(params[:id])
     @agenda.destroy
     redirect_to agenda_path
  end

@@ -4,7 +4,17 @@ class StudentsController < ApplicationController
   end
 
  def index
-    @student = Student.all
+    @students = Student.all
  end
 
+ def create
+    @student = Student.new(params[:student])
+    @student.save
+ end
+
+ def destroy
+   @student = Student.find(params[:id])
+   @student.destroy
+   redirect_to students_path
+ end
 end
