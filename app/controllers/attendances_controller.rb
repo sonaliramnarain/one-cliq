@@ -1,4 +1,4 @@
-c lass AttendancesController < ApplicationController
+class AttendancesController < ApplicationController
   def index
    @attendances = Attendance.all
   end
