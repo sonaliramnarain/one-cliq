@@ -33,12 +33,6 @@ class AttendancesController < ApplicationController
     redirect_to attendance_path(@attendance)
   end
 
-  def destroy
-    @attendance = Attendance.find(params[:id])
-    @attendance.destroy
-    redirect_to attendances_path
-  end
-
  private
 
   def attendance_params
