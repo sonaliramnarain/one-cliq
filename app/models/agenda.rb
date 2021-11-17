@@ -2,10 +2,6 @@ class Agenda < ApplicationRecord
   belongs_to :user
   belongs_to :subject
 
- validates :date,
- validates :start_time,
- validates :end_time,
- validate :presence,
- validate :late
+ validates :date, :start_time, :end_time, :presence, :late, presence: true
 
 end
