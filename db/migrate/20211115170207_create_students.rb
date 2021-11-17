@@ -3,7 +3,7 @@ class CreateStudents < ActiveRecord::Migration[6.0]
     create_table :students do |t|
       t.string :name
       t.string :classroom 
-      t.references :users
+      t.references :user, null: false, foreign_key: true
       
       t.timestamps
     end
