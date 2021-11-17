@@ -1,4 +1,4 @@
-c lass AttendancesController < ApplicationController
+class AttendancesController < ApplicationController
   def index
    @attendances = Attendance.all
   end
@@ -31,12 +31,6 @@ c lass AttendancesController < ApplicationController
     @attendance.update(attendance_params)
 
     redirect_to attendance_path(@attendance)
-  end
-
-  def destroy
-    @attendance = Attendance.find(params[:id])
-    @attendance.destroy
-    redirect_to attendances_path
   end
 
  private
