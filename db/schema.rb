@@ -42,27 +42,27 @@ ActiveRecord::Schema.define(version: 2021_11_16_123438) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
-    t.bigint "users_id"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["users_id"], name: "index_events_on_users_id"
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "students", force: :cascade do |t|
     t.string "name"
     t.string "classroom"
-    t.bigint "users_id"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["users_id"], name: "index_students_on_users_id"
+    t.index ["user_id"], name: "index_students_on_user_id"
   end
 
   create_table "subjects", force: :cascade do |t|
     t.string "name"
-    t.bigint "users_id"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["users_id"], name: "index_subjects_on_users_id"
+    t.index ["user_id"], name: "index_subjects_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -86,4 +86,7 @@ ActiveRecord::Schema.define(version: 2021_11_16_123438) do
   add_foreign_key "agendas", "users"
   add_foreign_key "attendances", "students"
   add_foreign_key "attendances", "users"
+  add_foreign_key "events", "users"
+  add_foreign_key "students", "users"
+  add_foreign_key "subjects", "users"
 end

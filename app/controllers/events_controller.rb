@@ -1,15 +1,23 @@
-class EventsController < ApplicationController
+class EventsController < ApplicationController  
+ def index
+   @events = Event.all
+ end
+
   def create
-    @event = Event.new(params[:event])
-    if @event.save
+    @event = Event.new(event_params)
+    @event.user = current_user
+    @event.save
     redirect_to events_path
-    else
-      render :new
-    end
+  end
+
+  def new
+    @event = Event.new(params[:event])
+    @event.save
+    
   end
 
   def show
-   @event = Event.new
+   @event = Event.find(params[:id])
   end
 
   def update
@@ -19,6 +27,9 @@ class EventsController < ApplicationController
      redirect_to event_path(@event)
   end
 
+  def edit
+    @event = Event.find(params[:id])
+  end
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
@@ -28,6 +39,6 @@ class EventsController < ApplicationController
  private
 
   def event_params
-     params.require(:event).permit(:date)
+     params.require(:event).permit(:name)
   end
 end
