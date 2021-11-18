@@ -1,0 +1,10 @@
+  <h1><strong> My Agenda</strong></h1>
+
+<% @agendas.each do |agenda| %>
+  <h2><%= agenda.name%></h2>
+   <p><%= agenda.date %></p>
+   <p><%= agenda.start_time %></p>
+   <p><%= agenda.end_time %></p>
+  <%= link_to subject_agenda_path(@agenda) do %>
+  <% end %>
+<% end %>

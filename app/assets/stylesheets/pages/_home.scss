@@ -1,16 +1,29 @@
 // Specific CSS for your home-page
 #contact{
-  width: 50%;
+  width: 40%;
  margin-left: 25%;
-  padding: 30px 90px 90px 90px;
+  padding: 30px;
   border: 6px solid #F7DAD9;
   box-shadow: 10px 10px 0 #F8EDED;
   border-radius: 50px;
   position: relative;
- align-items: center;
  background-color: #F9F9F9;
+ margin-right: 200px;
 }
 
-.text-primary{
- color:black;
+.button {
+ padding: 10px;
+  background-color: #D8B6A4;
+  border: 2px solid #F8EDED;
+  border-radius: 30px;
+  box-shadow: #F8EDED 2px 2px 0;
+  margin-left: 150px;
+}
+
+.container1 {
+ background-color: #E2D5D5;
+}
+
+.container2 {
+ background-color: honeydew;
 }

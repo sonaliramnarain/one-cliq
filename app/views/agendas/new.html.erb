@@ -1,0 +1,12 @@
+<%= form_for(@agenda) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :date %>
+  <%= f.text_field :date %>
+  <%= f.label :start_time %>
+  <%= f.number_field :start_time %>
+  <%= f.text_field :end_time %>
+  <%= f.label :end_time %>
+  <%= f.submit %>
+<% end %>
+<%= link_to 'Back', new_subject_agenda_path(@agenda)%>
