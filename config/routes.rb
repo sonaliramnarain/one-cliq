@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :subjects do 
-    resources :agenda, only: [:new, :create, :index, :show]
-  end
-  resources :agenda, only: [:edit, :update, :destroy]
+  resources :subjects #do 
+   # resources :agenda, only: [:new, :create, :index, :show]
+  #end
+  resources :agendas#, only: [:edit, :update, :destroy]
   resources :events
   resources :students do
     resources :attendances, only: [:new, :create, :index, :show]

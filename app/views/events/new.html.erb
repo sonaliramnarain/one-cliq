@@ -1,7 +1,35 @@
-<%= form_for(@event) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit %>
-<% end %>
+<div class= "container py-5 mb-40">
+  <div class= "d-flex align-items-center justify-content-center mb-4">
+   <h2><strong>Create a new event</strong><h2>
+  </div>
 
-<% @event.save %>
+
+    <div class= "bg-white rounded shadow h-100 card-body align-items-center py-5 form-new">
+        <%= form_for(@event) do |f| %>
+        <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        </div>
+        <br>
+        <div>
+        <%= f.label :event_description %>
+        <%= f.text_field :event_description%>
+        </div>
+        <br>
+        <div>
+        <%= f.label :additional_information %>
+        <%= f.text_field :additional_information%>
+        </div>
+        <div class= "d-flex align-items-center justify-content-center mb-4">
+            <%= f.submit "Add event", class: 'btn btn-gradient' %>
+            <%= link_to 'Cancel', events_path(@event), class: 'btn btn-ghost' %>
+        </div>    
+        <% end %>
+    </div>    
+</div>
+
+
+  
+  
+  
+

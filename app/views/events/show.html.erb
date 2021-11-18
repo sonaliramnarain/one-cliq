@@ -11,7 +11,11 @@
                         </div>
                           <ul class="list-group list-group-flush">
                            <li class="list-group-item">
-                           Event:<p><%= @event.name%></p>
+                           <p><strong>Event: </strong><%= @event.name%></p>
+                           <p><strong>Event Description: </strong><%= @event.event_description%></p>
+                           <p><strong>Additional Information: </strong><%= @event.additional_information%></p>
+                           
+                           
                            </li>
                         
                           </ul>
@@ -19,11 +23,14 @@
 
                                 <%= link_to "Delete",event_path(@event),
                                 method: :delete,
-                                data: { confirm: "Are you sure?" } %>
+                                data: { confirm: "Are you sure?" },class: 'text-center', class: 'btn btn-ghost m-4' %>
                 </div>
+                  <div class= "d-flex align-items-center justify-content-center mb-4">
+        <%= link_to 'Back', events_path(@event), class: 'text-center', class: 'btn btn-gradient m-4' %>   
+           </div>
             </div>
           </div>
+          
 
-        <%= link_to 'Back', events_path(@event), class: 'btn btn-gradient' %>
       </div>
     </div>

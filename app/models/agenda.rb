@@ -1,7 +1,5 @@
 class Agenda < ApplicationRecord
-  belongs_to :user
-  belongs_to :subject
-
-  validates :date, :start_time, :end_time, presence: true
-
+  belongs_to :teacher, class_name: "User"
+  belongs_to :classroom
+  validates :start_time, :end_time, presence: true
 end

@@ -1,11 +1,17 @@
 class EventsController < ApplicationController  
  def index
    @events = Event.all
+   if params[:query].present?
+    sql_query = "name ILIKE :query OR day ILIKE :query"
+    @events = Event.where(sql_query, query: "%#{params[:query]}%")
+  else
+    @events = Event.all
+  end
  end
 
   def create
     @event = Event.new(event_params)
-    @event.user = current_user
+    @event.teacher = current_user
     @event.save
     redirect_to events_path
   end
@@ -38,6 +44,6 @@ class EventsController < ApplicationController
  private
 
   def event_params
-     params.require(:event).permit(:name)
+     params.require(:event).permit(:name, :event_description, :additional_information, :day, :date)
   end
 end

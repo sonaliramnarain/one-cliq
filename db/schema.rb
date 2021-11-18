@@ -10,34 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_16_123438) do
+ActiveRecord::Schema.define(version: 2021_11_18_145415) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "agendas", force: :cascade do |t|
-    t.date "date"
     t.time "start_time"
     t.time "end_time"
     t.bigint "user_id", null: false
-    t.bigint "subject_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["subject_id"], name: "index_agendas_on_subject_id"
+    t.bigint "classroom_id", null: false
+    t.index ["classroom_id"], name: "index_agendas_on_classroom_id"
     t.index ["user_id"], name: "index_agendas_on_user_id"
   end
 
   create_table "attendances", force: :cascade do |t|
     t.bigint "student_id", null: false
-    t.date "date"
     t.text "remark"
-    t.bigint "user_id", null: false
     t.boolean "is_present", default: true
-    t.boolean "is_late", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "agenda_id", null: false
+    t.index ["agenda_id"], name: "index_attendances_on_agenda_id"
     t.index ["student_id"], name: "index_attendances_on_student_id"
-    t.index ["user_id"], name: "index_attendances_on_user_id"
+  end
+
+  create_table "classrooms", force: :cascade do |t|
+    t.string "level"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "events", force: :cascade do |t|
@@ -45,24 +48,20 @@ ActiveRecord::Schema.define(version: 2021_11_16_123438) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "event_description"
+    t.string "additional_information"
+    t.date "date"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "students", force: :cascade do |t|
     t.string "name"
-    t.string "classroom"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "classroom_id", null: false
+    t.index ["classroom_id"], name: "index_students_on_classroom_id"
     t.index ["user_id"], name: "index_students_on_user_id"
-  end
-
-  create_table "subjects", force: :cascade do |t|
-    t.string "name"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_subjects_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -82,11 +81,11 @@ ActiveRecord::Schema.define(version: 2021_11_16_123438) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "agendas", "subjects"
+  add_foreign_key "agendas", "classrooms"
   add_foreign_key "agendas", "users"
+  add_foreign_key "attendances", "agendas"
   add_foreign_key "attendances", "students"
-  add_foreign_key "attendances", "users"
   add_foreign_key "events", "users"
+  add_foreign_key "students", "classrooms"
   add_foreign_key "students", "users"
-  add_foreign_key "subjects", "users"
 end
