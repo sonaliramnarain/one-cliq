@@ -1,0 +1,7 @@
+<h1>Student Lists 👨‍🎓</h1>
+<% @students.each do |event| %>
+  <%= link_to student_path(student) do %>
+   <h2><%= student.name%></h2>
+   <p><%= student.classroom %></p>
+  <%end%>
+<%end %>
