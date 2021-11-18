@@ -7,6 +7,11 @@ class AgendasController < ApplicationController
     @agenda = Agenda.find(params[:id])
   end
 
+ def new
+  @agenda = agenda.find(params[:agenda_id])
+  @agenda = Agenda.new
+ end
+
   def update
     @agenda = Agenda.find(params[:id])
     @agenda.update(params[:agenda])
