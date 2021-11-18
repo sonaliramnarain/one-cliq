@@ -1,5 +1,3 @@
 class Event < ApplicationRecord
-  belongs_to :user
- #belongs_to :student
-  #validates :date
+  belongs_to :teacher, class_name: "User"
 end

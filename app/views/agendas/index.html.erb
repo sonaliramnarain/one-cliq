@@ -1,0 +1,18 @@
+<div class="cover mb-4 d-flex align-items-center justify-content-center" >
+  <h1>Agendas</h1>
+</div>
+<div class="cover mb-4 d-flex align-items-center justify-content-center" >
+<div class= "row ">
+  <div class ="col">
+    <% @agendas.each do |agenda| %>
+        <div class="card-product">
+          <div class="card-product-infos">
+            <%= link_to agendas_path(agenda) do %>
+              <h2><%= agenda.day %></h2>       
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

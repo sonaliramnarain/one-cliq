@@ -21,8 +21,8 @@ class AgendasController < ApplicationController
 
  private
 
- def agenda_params
-    params.require(:agenda).permit(:date, :start_time, :end_time)
+ def agendas_params
+    params.require(:agenda).permit(:start_time, :end_time)
  end
 
 end

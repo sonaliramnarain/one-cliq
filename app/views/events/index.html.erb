@@ -1,6 +1,24 @@
+<br>
 <div class="cover mb-4 d-flex align-items-center justify-content-center" >
   <h1>Events</h1>
 </div>
+
+<br>
+<div class="search box"> 
+   <%= form_tag events_path, method: :get do %>
+   <div class="search-event mb-4 d-flex" >
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find an event..."
+    %>
+      
+      <%= submit_tag "Search", class: "btn search-btn" %>
+      </div>
+  <% end %>
+</div>
+
+
 <div class="cover mb-4 d-flex align-items-center justify-content-center" >
 <div class= "row ">
 <div class ="col">
@@ -19,7 +37,9 @@
       </div>
     </div>
   <% end %>
-          <%= link_to "Add", new_event_path(@event), class: 'text-center', class: 'btn btn-gradient m-4'%> 
+  <div class="cover mb-4 d-flex align-items-center justify-content-center" >
+          <%= link_to "Add", new_event_path(@event), class: 'text-center', class: 'btn btn-add m-4'%> 
+          </div>
 </div>
 </div>
 </div>
