@@ -25,7 +25,7 @@
   <% @classrooms.each do |classroom| %>
     <div class="card-product">
       <div class="card-product-infos">
-        <%= link_to classroom_path(classroom) do %>
+        <%= link_to classroom_students_path(classroom) do %>
           <h2><%= classroom.level%></h2>
         <% end %>
       </div>

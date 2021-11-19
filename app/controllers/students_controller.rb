@@ -1,11 +1,11 @@
 class StudentsController < ApplicationController
- def index
-   @students = Student.all
+  def index
+    @classroom = Classroom.find(params[:classroom_id])
    if params[:query].present?
-     sql_query = "name ILIKE :query OR day ILIKE :query"
-     @students = Student.where(sql_query, query: "%#{params[:query]}%")
+     sql_query = "name ILIKE :query"
+     @students = Student.where(classroom: @classroom).where(sql_query, query: "%#{params[:query]}%")
    else
-     @students = Student.all
+    @students = Student.where(classroom: @classroom)
    end
   end
 
@@ -37,6 +37,6 @@ class StudentsController < ApplicationController
  private
 
  def student_params
-   params.require(:student).permit(:name)
+   params.require(:student).permit(:name, :classroom)
   end
 end
