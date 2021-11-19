@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :subjects #do 
    # resources :agenda, only: [:new, :create, :index, :show]
+   resources :classrooms
+   resources :classrooms do
+    resources :students, only: [:index, :show]
+   end
   #end
   resources :agendas#, only: [:edit, :update, :destroy]
   resources :events
