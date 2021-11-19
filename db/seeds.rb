@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 Classroom.destroy_all
 
 classroom1 = Classroom.create!(level: "Grade 7")
@@ -84,32 +85,4 @@ Yudish = Student.create( name:"Yudish Nundun",
 
 
 
-classroom2 = Classroom.create!(level: "Grade 8")
-Anas = Student.create( name:"Anas Soobratty",
-                         classroom: classroom2,
-                         parent: User.last
-)
-Christian = Student.create( name:"Christian Beaux Yeux",
-                         classroom: classroom2,
-                          parent: User.last
-)
-Christian = Student.create( name:"Bongard",
-                         classroom: classroom2,
-                          parent: User.last
-)
-Julie = Student.create( name:"Julie Miguel",
-                         classroom: classroom2,
-                          parent: User.last
-)
-Vilorshini = Student.create( name:"Vilorshini Ramsamy",
-                         classroom: classroom2,
-                          parent: User.last
-)
-Yogaisan = Student.create( name:"Yogaisan Ramasawny",
-                         classroom: classroom2,
-                          parent: User.last
-)
-Yudish = Student.create( name:"Yudish Nundun",
-                         classroom: classroom2,
-                          parent: User.last
-)
+
