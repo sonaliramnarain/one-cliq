@@ -2,7 +2,7 @@ class EventsController < ApplicationController
  def index
    @events = Event.all
    if params[:query].present?
-    sql_query = "name ILIKE :query OR day ILIKE :query"
+    sql_query = "name ILIKE :query"
     @events = Event.where(sql_query, query: "%#{params[:query]}%")
   else
     @events = Event.all
@@ -45,6 +45,6 @@ class EventsController < ApplicationController
  private
 
   def event_params
-     params.require(:event).permit(:name, :event_description, :additional_information, :day, :date)
+     params.require(:event).permit(:name, :event_description, :additional_information, :date)
   end
 end
