@@ -1,4 +1,4 @@
-class EventsController < ApplicationController  
+class EventsController < ApplicationController
  def index
    @events = Event.all
    if params[:query].present?
@@ -19,7 +19,7 @@ class EventsController < ApplicationController
   def new
     @event = Event.new(params[:event])
     @event.save
-    
+
   end
 
   def show
@@ -35,6 +35,7 @@ class EventsController < ApplicationController
   def edit
     @event = Event.find(params[:id])
   end
+
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
