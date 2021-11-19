@@ -13,7 +13,7 @@
   <% end %>
 </div>
 
-<% @students.each do |event| %>
+<% @students.each do |student| %>
   <%= link_to student_path(student) do %>
    <h2><%= student.name %></h2>
    <p><%= student.classroom %></p>

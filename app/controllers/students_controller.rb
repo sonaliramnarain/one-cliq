@@ -11,9 +11,13 @@ class StudentsController < ApplicationController
 
   def create
    @student = Student.new(student_params)
-   @student.user = current_user
-   @student.save
-    redirect_to students_path
+   @student.parent = current_user
+    raise
+    if @student.save
+     redirect_to students_path
+   else
+     render :new
+   end
   end
 
   def show

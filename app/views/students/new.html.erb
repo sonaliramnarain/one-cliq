@@ -1,6 +1,11 @@
 <h2>Add a new Student 👩🏼‍🎓</h2>
+ <p>Please Fill the Form</p>
 <%= form_for(@student) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
-  <%= f.submit "Add Student"%>
+  <%= f.label :classroom %>
+  <%= f.text_field :classroom %>
+
+
+ <%= f.submit "Add Student"%>
 <% end %>
