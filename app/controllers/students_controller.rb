@@ -12,7 +12,6 @@ class StudentsController < ApplicationController
   def create
    @student = Student.new(student_params)
    @student.parent = current_user
-    raise
     if @student.save
      redirect_to students_path
    else
