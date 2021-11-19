@@ -9,7 +9,8 @@
         <div class="card-product">
           <div class="card-product-infos">
             <%= link_to agendas_path(agenda) do %>
-              <h2><%= agenda.teacher.subject %></h2>       
+              <h2><%= agenda.teacher.subject %></h2>
+              <p><%= agenda.start_time.strftime("%A")%></p>
             <% end %>
           </div>
         </div>
