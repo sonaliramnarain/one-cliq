@@ -16,6 +16,7 @@ Hans = Student.create( name:"Hansvin Venetheethan",
                          classroom: classroom1,
                          parent: User.last 
 )
+
 Inna = Student.create( name:"Inna Goordoyal",
                          classroom: classroom1,
                          parent: User.last 
