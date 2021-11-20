@@ -89,3 +89,13 @@ Yudish = Student.create( name:"Yudish Nundun",
                          classroom: classroom2,
                           parent: User.last
 )
+
+classroom3 = Classroom.create!(level: "Grade 9")
+
+classroom4 = Classroom.create!(level: "Grade 10")
+
+classroom5 = Classroom.create!(level: "Grade 11")
+
+classroom6 = Classroom.create!(level: "Grade 12")
+
+classroom7 = Classroom.create!(level: "Grade 13")
