@@ -5,7 +5,7 @@ class EventsController < ApplicationController
     sql_query = "name ILIKE :query"
     @events = Event.where(sql_query, query: "%#{params[:query]}%")
   else
-    @events = Event.all
+    @events = Event.all.order(created_at: :desc)
   end
  end
 
