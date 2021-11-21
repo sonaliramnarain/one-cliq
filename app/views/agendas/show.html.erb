@@ -19,11 +19,19 @@
           </div>
 
           <br>
+
           <div>
            <%= f.label :additional_information %>
            <%= f.text_field :additional_information%>
           </div>
+
           <br>
+
+          <div>
+           <%= f.label :day %>
+           <%= f.text_field :day%>
+          </div>
+
           <div class= "d-flex align-items-center justify-content-center mb-4">
               <%= f.submit "update", class: 'btn btn-gradient' %>
               <%= link_to 'Cancel', :back, class: 'btn btn-ghost' %>
