@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Classroom.destroy_all
+Agenda.destroy_all
+Student.destroy_all
 
 classroom1 = Classroom.create!(level: "Grade 7")
 Sonali = Student.create( name:"Sonali Ramnarain",
@@ -63,32 +65,7 @@ Arvind = Student.create( name:"Sharma Gowreea",
 classroom2 = Classroom.create!(level: "Grade 8")
 Anas = Student.create( name:"Anas Soobratty",
                          classroom: classroom2,
-                         parent: User.last
-)
-Christian = Student.create( name:"Christian Beaux Yeux",
-                         classroom: classroom2,
-                          parent: User.last
-)
-Christian_b = Student.create( name:"Bongard",
-                         classroom: classroom2,
-                          parent: User.last
-)
-Julie = Student.create( name:"Julie Miguel",
-                         classroom: classroom2,
-                          parent: User.last
-)
-Vilorshini = Student.create( name:"Vilorshini Ramsamy",
-                         classroom: classroom2,
-                          parent: User.last
-)
-Yogaisan = Student.create( name:"Yogaisan Ramasawny",
-                         classroom: classroom2,
-                          parent: User.last
-)
-Yudish = Student.create( name:"Yudish Nundun",
-                         classroom: classroom2,
-                          parent: User.last
-)
+
 
 classroom3 = Classroom.create!(level: "Grade 9")
 
@@ -99,3 +76,4 @@ classroom5 = Classroom.create!(level: "Grade 11")
 classroom6 = Classroom.create!(level: "Grade 12")
 
 classroom7 = Classroom.create!(level: "Grade 13")
+

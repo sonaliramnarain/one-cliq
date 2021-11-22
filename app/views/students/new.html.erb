@@ -1,11 +1,27 @@
-<h2>Add a new Student 👩🏼‍🎓</h2>
- <p>Please Fill the Form</p>
-<%= form_for(@student) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :classroom %>
-  <%= f.text_field :classroom %>
-
-
- <%= f.submit "Add Student"%>
-<% end %>
+<div class= "container py-5 mb-40">
+  <div class= "d-flex align-items-center justify-content-center mb-4">
+<h2>Add a new Student to this class👩🏼‍🎓</h2>
+  </div>
+    <div class= "bg-white rounded shadow h-100 card-body align-items-center py-5 form-new">
+        <%= form_for(@student) do |f| %>
+         <div>
+           <%= f.label :name %>
+           <%= f.text_field :name %>
+         </div>
+         <br>
+         <div>
+           <%= f.label :age %>
+           <%= f.text_field :age%>
+         </div>
+         <br>       
+          <div>
+           <%= f.label :address %>
+           <%= f.text_field :address%>
+         </div>
+         <div class= "d-flex align-items-center justify-content-center mb-4">
+           <%= f.submit "Add student", class: 'btn btn-gradient' %>
+           <%= link_to 'Cancel', :back, class: 'btn btn-ghost' %>
+         </div>
+        <% end %>
+    </div>
+</div>
