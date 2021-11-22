@@ -10,14 +10,15 @@
          <div class="card-body d-flex align-items-center">
            <h2><strong>Name: <%= @student.name %></strong></h2>
           </div>
-
+         
           <ul class="list-group list-group-flush">
            <li class="list-group-item">
+             <img src="<%= @student.photo %>">
              <p><strong>Age: <%= @student.age %></strong></p>
              <p><strong>Classroom: <%= @student.classroom.level %></strong></p>
              <p><strong>Address: <%= @student.address %></strong></p>
              <p><strong>Contact: <%= @student.contact %></strong></p>
-             <p><strong>Remarks: <%= @student.remarks %></strong></p>
+             <p><strong>Remarks: <%= @student.remark %></strong></p>
            </li>
           </ul>
           <%= link_to "update", edit_student_path(@student), class: 'text-center', class: 'btn btn-gradient m-4'%>
