@@ -1,17 +1,27 @@
-.navbar-lewagon {
+.navbar-logo {
   justify-content: space-between;
-  background:  #4ea2a5;
+  background:  #7bbbbd;
+  
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-logo .navbar-collapse {
   flex-grow: 0;
+  
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 60px;
+.navbar-logo .navbar-brand img {
+  width: 100px;
+  border-radius: 100px;
+  padding-right: 5px;
+
 }
 
 .navbar-email{
   margin-top: 6px;
+}
+
+.navbar-logo{
+border-radius: 0px;
+
 }
 
