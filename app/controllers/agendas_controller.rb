@@ -8,8 +8,15 @@ class AgendasController < ApplicationController
   end
 
  def new
-  @agenda = agenda.find(params[:agenda_id])
-  @agenda = Agenda.new
+   @agenda = Agenda.new
+   @agenda.save
+ end
+
+ def create
+    @agenda = Agenda.new(agendas_params)
+    @agenda.teacher = current_user
+    @agenda.save
+     redirect_to agendas_path
  end
 
   def update

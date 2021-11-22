@@ -9,20 +9,20 @@
     border-radius: 15px;
     margin-top: 10px;
   }
-  
+
 
   .card-product img {
     height: 100%;
     width: 120px;
     object-fit: cover;
   }
-  
+
   .card-product h2 {
     font-size: 16px;
     font-weight: bold;
     margin: 0;
   }
-  
+
   .card-product p {
     font-size: 12px;
     line-height: 1.4;
@@ -30,10 +30,10 @@
     margin-bottom: 0;
     margin-top: 8px;
   }
-  
+
   .card-product .card-product-infos {
     padding: 16px;
-    
+
   }
 
   .row .col .card-product:hover{
@@ -41,44 +41,48 @@
       box-shadow: 0 10px 40px rgba(0,0,0,0.4);
       background: linear-gradient(45deg, white, #4ea2a5);
       cursor: pointer;
-    }
+ }
 
 
 
-    input[type="checkbox"]{
-      appearance: none;
-      -webkit-appearance: none;
-      height: 50px;
-      width: 50px;
-      background-color: rgb(75, 216, 75);
-      border-radius: 5px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      outline: none;
-      position: absolute;
-      right: 50px;
-      margin-top: -35px;  
-    }
-    
-    
-    
-    
-    input[type="checkbox"]:after{
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      content: "\f00d";
-      font-size: 40px;
-      background-color: none;
-      display: none;
-    }
-    
-    input[type="checkbox"]:checked{
-      content: none;
-      background-color: rgb(168, 39, 39);
-    }
-    
-    input[type="checkbox"]:checked:after{
-    display: block;
-    }
+ input[type="checkbox"]{
+   appearance: none;
+   -webkit-appearance: none;
+   height: 50px;
+   width: 50px;
+   background-color: rgb(75, 216, 75);
+   border-radius: 5px;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   outline: none;
+   position: absolute;
+   right: 50px;
+   margin-top: -35px;
+ }
+
+
+
+
+  input[type="checkbox"]:after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00d";
+    font-size: 40px;
+    background-color: none;
+    display: none;
+  }
+
+  input[type="checkbox"]:checked{
+    content: none;
+    background-color: rgb(168, 39, 39);
+  }
+  input[type="checkbox"]:checked:after{
+  display: block;
+  }
+
+ .card img {
+ height: 200px;
+ width: 200px;
+ }
