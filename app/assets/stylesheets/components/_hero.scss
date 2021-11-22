@@ -16,6 +16,7 @@ h1,h2,h3,h4,h5,h6,
 .display-4 {
     color: var(--dark);
     font-weight: 700;
+   
 }
 
 a {
@@ -53,6 +54,7 @@ img {
     background-attachment: fixed;
     position: relative;
     z-index: 2;
+  
 }
 
 .hero::after {
