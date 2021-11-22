@@ -3,14 +3,15 @@
 </div>
 
 <% @agendas.each do |agenda| %>
-  
+  <div class="mr-10 d-flex align-items-center justify-content-center">
+   <h3><%= agenda.start_time.strftime("%A:%F") %></h3>
+ </div>
  <div class="cover mb-4 d-flex align-items-center justify-content-center" >
    <div class= "row ">
      <div class ="col">
        <div class="card-product">
          <div class="card-product-infos">
            <h2><%= link_to agenda.teacher.subject, agenda_path(agenda) %></h2>
-             <p>Date: <%= agenda.start_time.strftime("%A, %F") %></p>
              <p>Begin: <%= agenda.start_time.strftime("%H:%M") %> - End:<%= agenda.end_time.strftime("%H:%M") %> </p>
              <p>Classroom: <%= agenda.classroom.level %></p>
          </div>
