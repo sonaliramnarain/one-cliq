@@ -9,40 +9,40 @@
 Classroom.destroy_all
 
 classroom1 = Classroom.create!(level: "Grade 7")
-Sonali = Student.create( name:"Sonali Ramnarain",
+Sonali = Student.create!( name:"Sonali Ramnarain",
                          classroom: classroom1,
                          parent: User.last 
 )
-Hans = Student.create( name:"Hansvin Venetheethan",
+Hans = Student.create!( name:"Hansvin Venetheethan",
                          classroom: classroom1,
                          parent: User.last 
 )
 
-Inna = Student.create( name:"Inna Goordoyal",
+Inna = Student.create!( name:"Inna Goordoyal",
                          classroom: classroom1,
                          parent: User.last 
 )
-Billy = Student.create( name:"Billy Pearl",
+Billy = Student.create!( name:"Billy Pearl",
                          classroom: classroom1,
                          parent: User.last 
 )
-Dhanistha = Student.create( name:"Dhanistha Goordoyal",
+Dhanistha = Student.create!( name:"Dhanistha Goordoyal",
                          classroom: classroom1,
                          parent: User.last 
 )
-Dushveer = Student.create( name:"Dushveer Sumaruth",
+Dushveer = Student.create!( name:"Dushveer Sumaruth",
                          classroom: classroom1,
                          parent: User.last 
 )
-Mozaffar = Student.create( name:"Mozaffar Beekun",
+Mozaffar = Student.create!( name:"Mozaffar Beekun",
                          classroom: classroom1,
                          parent: User.last 
 )
-Houzair = Student.create( name:"Houzair Koussa",
+Houzair = Student.create!( name:"Houzair Koussa",
                          classroom: classroom1,
                          parent: User.last 
 )
-Yaasir = Student.create( name:"Yaasir Mohammad",
+Yaasir = Student.create!( name:"Yaasir Mohammad",
                          classroom: classroom1,
                          parent: User.last 
 )
@@ -62,25 +62,35 @@ Arvind = Student.create( name:"Sharma Gowreea",
 
 classroom2 = Classroom.create!(level: "Grade 8")
 Anas = Student.create( name:"Anas Soobratty",
-                         classroom: classroom2
+                         classroom: classroom2,
+                         parent: User.last 
 )
+
 Christian = Student.create( name:"Christian Beaux Yeux",
-                         classroom: classroom2
+                         classroom: classroom2,
+                         parent: User.last 
 )
-Christian = Student.create( name:"Bongard",
-                         classroom: classroom2
+
+Christian_b = Student.create( name:"Bongard",
+                         classroom: classroom2,
+                         parent: User.last 
 )
+
 Julie = Student.create( name:"Julie Miguel",
-                         classroom: classroom2
+                         classroom: classroom2,
+                         parent: User.last 
 )
 Vilorshini = Student.create( name:"Vilorshini Ramsamy",
-                         classroom: classroom2
+                         classroom: classroom2,
+                         parent: User.last 
 )
 Yogaisan = Student.create( name:"Yogaisan Ramasawny",
-                         classroom: classroom2
+                         classroom: classroom2,
+                         parent: User.last 
 )
 Yudish = Student.create( name:"Yudish Nundun",
-                         classroom: classroom2
+                         classroom: classroom2,
+                         parent: User.last 
 )
 
 
