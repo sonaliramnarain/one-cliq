@@ -19,6 +19,7 @@ Sonali = Student.create( name:"Sonali Ramnarain",
                          remark: "not very punctual",
                          parent: User.last
 )
+
 Hans = Student.create( name:"Hansvin Venetheethan",
                         photo: "https://avatars.githubusercontent.com/u/90834561?v=4",
                         classroom: classroom1,
@@ -29,7 +30,7 @@ Hans = Student.create( name:"Hansvin Venetheethan",
                         parent: User.last
 )
 
-Inna = Student.create( name:"Inna Goordoyal",
+Inna = Student.create!( name:"Inna Goordoyal",
                          classroom: classroom1,
                          photo: "https://avatars.githubusercontent.com/u/89962866?v=4",
                          age: 12,
@@ -38,6 +39,7 @@ Inna = Student.create( name:"Inna Goordoyal",
                          remark: "not very punctual",
                          parent: User.last
 )
+
 Billy = Student.create( name:"Billy Pearl",
                         photo: "https://ca.slack-edge.com/T02NE0241-U026TLSDJNN-89b34fed5cf6-72",
                         classroom: classroom1,
@@ -55,8 +57,9 @@ Dhanistha = Student.create( name:"Dhanistha Goordoyal",
                             contact: "54569875",
                             remark: "not very punctual",
                             parent: User.last
+
 )
-Dushveer = Student.create( name:"Dushveer Sumaruth",
+Dushveer = Student.create!( name:"Dushveer Sumaruth",
                          classroom: classroom1,
                          photo: "https://avatars.githubusercontent.com/u/90179824?v=4",
                          age: 12,
@@ -65,7 +68,7 @@ Dushveer = Student.create( name:"Dushveer Sumaruth",
                          remark: "not very punctual",
                          parent: User.last
 )
-Mozaffar = Student.create( name:"Mozaffar Beekun",
+Mozaffar = Student.create!( name:"Mozaffar Beekun",
                          classroom: classroom1,
                          photo: "https://avatars.githubusercontent.com/u/88921498?v=4",
                          age: 12,
@@ -74,7 +77,7 @@ Mozaffar = Student.create( name:"Mozaffar Beekun",
                          remark: "not very punctual",
                          parent: User.last
 )
-Houzair = Student.create( name:"Houzair Koussa",
+Houzair = Student.create!( name:"Houzair Koussa",
                          classroom: classroom1,
                          photo: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1631554841/pw79cuyvydocbt6ypkw7.jpg",
                          age: 12,
@@ -83,7 +86,7 @@ Houzair = Student.create( name:"Houzair Koussa",
                          remark: "not very punctual",
                          parent: User.last
 )
-Yaasir = Student.create( name:"Yaasir Mohammad",
+Yaasir = Student.create!( name:"Yaasir Mohammad",
                          classroom: classroom1,
                          photo: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1631423192/s63blpkj9qwqkly9jmwa.jpg",
                          age: 12,
@@ -190,10 +193,16 @@ Yudish = Student.create( name:"Yudish Nundun",
 )
 
 
+                         parent: User.last 
+)
+
+
+
 
 classroom3 = Classroom.create!(level: "Grade 9")
 
 classroom4 = Classroom.create!(level: "Grade 10")
+
 
 classroom5 = Classroom.create!(level: "Grade 11")
 
