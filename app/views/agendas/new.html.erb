@@ -5,7 +5,7 @@
 
 
     <div class= "bg-white rounded shadow h-100 card-body align-items-center py-5 form-new">
-        <%= form_for(@event) do |f| %>
+        <%= form_for(@agendas) do |f| %>
           <div>
           <%= f.label :name %>
           <%= f.text_field :name %>
@@ -17,19 +17,18 @@
           </div>
           <br>
           <div>
-           <%= f.label :additional_information %>
-           <%= f.text_field :additional_information%>
+          <%= f.label :additional_information %>
+          <%= f.text_field :additional_information%>
           </div>
           <br>
           <div>
-          <%= simple_form_for ([@event]), remote: true do |f| %>
-          <%= f.input :date, as: :date, html5: true, input_html: {class: 'form-input'} %>
-         </div>
+          <%= f.label :day %>
+          <%= f.text_field :day%>
+          </div>
           <div class= "d-flex align-items-center justify-content-center mb-4">
               <%= f.submit "update", class: 'btn btn-gradient' %>
               <%= link_to 'Cancel', :back, class: 'btn btn-ghost' %>
-          </div>
+          </div>    
       <% end %>
-      <% end %>
-    </div>
+    </div>    
 </div>

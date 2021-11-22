@@ -1,4 +1,39 @@
-<h2>Student Profile</h2>
- <p><strong>Name: <%= @student.name %></strong></p>
- <p><strong>Classroom: <%= @student.classroom %></strong></p>
+
+<div class= "container py-5 mb-40">
+  <div class= "d-flex align-items-center justify-content-center mb-4">
+   <h2><strong>Student Profile</strong><h2>
+  </div>
+
+  <div class= "container">
+    <div class="d-flex row justify-content-center">
+     <div class="col-sm-8">
+       <div class="card bg-light my-3">
+         <div class="card-body d-flex align-items-center">
+           <h2><strong>Name: <%= @student.name %></strong></h2>
+          </div>
+
+          <ul class="list-group list-group-flush">
+           <li class="list-group-item">
+             <p><strong>Age: <%= @student.age %></strong></p>
+             <p><strong>Classroom: <%= @student.classroom.level %></strong></p>
+             <p><strong>Address: <%= @student.address %></strong></p>
+             <p><strong>Contact: <%= @student.contact %></strong></p>
+             <p><strong>Remarks: <%= @student.remarks %></strong></p>
+           </li>
+          </ul>
+          <%= link_to "update", edit_student_path(@student), class: 'text-center', class: 'btn btn-gradient m-4'%>
+          <%= link_to "Delete",student_path(@student), method: :delete,data: { confirm: "Are you sure?" },class: 'text-center', class: 'btn btn-ghost m-4' %>
+        </div>
+
+        <div class= "d-flex align-items-center justify-content-center mb-4">
+          <%= link_to 'Back', students_path(@student), class: 'text-center', class: 'btn btn-gradient m-4' %>
+        </div>
+
+      <div>
+    </div>
+  </div>
+</div>
+
+
  <!--student: name,classroom,  age, address, contact, remarks(results, behaviour)
+
