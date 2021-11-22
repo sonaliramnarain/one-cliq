@@ -1,34 +1,37 @@
 <div class= "container py-5 mb-40">
   <div class= "d-flex align-items-center justify-content-center mb-4">
-   <h2><strong>Edit this event</strong><h2>
+   <h2><strong>Create A new Lecture</strong><h2>
   </div>
 
 
-    <div class= "bg-white rounded shadow h-100 card-body align-items-center py-5 form-new">
-        <%= form_for(@agendas) do |f| %>
-          <div>
-          <%= f.label :name %>
-          <%= f.text_field :name %>
-          </div>
-          <br>
-          <div>
-          <%= f.label :event_description %>
-          <%= f.text_field :event_description%>
-          </div>
-          <br>
-          <div>
-          <%= f.label :additional_information %>
-          <%= f.text_field :additional_information%>
-          </div>
-          <br>
-          <div>
-          <%= f.label :day %>
-          <%= f.text_field :day%>
-          </div>
-          <div class= "d-flex align-items-center justify-content-center mb-4">
-              <%= f.submit "update", class: 'btn btn-gradient' %>
-              <%= link_to 'Cancel', :back, class: 'btn btn-ghost' %>
-          </div>    
-      <% end %>
-    </div>    
+  <div class= "bg-white rounded shadow h-100 card-body align-items-center py-5 form-new">
+    <%= form_for(@agendas) do |f| %>
+      <div>
+       <%= f.label :name %>
+       <%= f.text_field :name %>
+      </div>
+      <br>
+      <div>
+       <%= f.label :date %>
+       <%= f.text_field :date%>
+      </div>
+      <br>
+      <div>
+       <%= f.label :start_time %>
+       <%= f.text_field :start_time %>
+      </div>
+      <br>
+      <div>
+       <%= f.label :end_time %>
+       <%= f.text_field :end_time %>
+      </div>
+
+      <div class= "d-flex align-items-center justify-content-center mb-4">
+       <%= f.submit "update", class: 'btn btn-gradient' %>
+        <%= link_to 'Cancel', :back, class: 'btn btn-ghost' %>
+      </div>
+
+    <% end %>
+  </div>
+
 </div>
