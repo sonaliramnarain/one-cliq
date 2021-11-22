@@ -1,4 +1,7 @@
+ <br>
+ <div class="cover mb-4 d-flex align-items-center justify-content-center" >
 <h1>Student Lists 👨‍🎓</h1>
+</div>
 
 <div class="search box">
    <%= form_tag classroom_students_path, method: :get do %>
@@ -19,12 +22,16 @@
 <div class ="col">
  <% @students.each do |student| %>
     <div class="card-product">
+    <img src= "<%= student.photo %>" />
       <div class="card-product-infos">
         <%= link_to student_path(student) do %>
    <h2><%= student.name %></h2>
-   <p><%= student.classroom.level %></p>
         <% end %>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <div class ="wrapper">
+        <input type="checkbox" >
       </div>
+    </div>
     </div>
   <% end %>
   <div class="cover mb-4 d-flex align-items-center justify-content-center" >

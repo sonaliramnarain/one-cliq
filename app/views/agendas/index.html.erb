@@ -8,13 +8,45 @@
     <% @agendas.each do |agenda| %>
         <div class="card-product">
           <div class="card-product-infos">
-            <%= link_to agendas_path(agenda) do %>
-              <h2><%= agenda.teacher.subject %></h2>
-              <p><%= agenda.start_time.strftime("%A")%></p>
+            <%= link_to agenda_path(@agendas) do %>
+              <h2><%= agenda.start_time.strftime("%A")%></h2>
             <% end %>
           </div>
         </div>
       <% end %>
+    </div>
+  </div>
+</div>
+  
+  
+  
+  
+  
+<div class="cover mb-4 d-flex align-items-center justify-content-center" >
+  <h1>Agendas</h1>
+</div>
+<div class="cover mb-4 d-flex align-items-center justify-content-center" >
+<div class= "row ">
+  <div class ="col">
+        <div class="card-product">
+          <div class="card-product-infos">
+  <h2><%= link_to 'Monday', agenda_path(@agendas) %></h2>
+  </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="cover mb-4 d-flex align-items-center justify-content-center" >
+<div class= "row ">
+  <div class ="col">
+        <div class="card-product">
+          <div class="card-product-infos">
+  <h2><%= link_to 'Tuesday', agendas_path %></h2>
+  </div>
+        </div>
     </div>
   </div>
 </div>
