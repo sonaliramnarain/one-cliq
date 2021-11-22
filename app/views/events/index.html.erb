@@ -4,7 +4,7 @@
 </div>
 
 <br>
-<div class="search box"> 
+<div class="search box">
    <%= form_tag events_path, method: :get do %>
    <div class="search-event mb-4 d-flex" >
     <%= text_field_tag :query,
@@ -12,7 +12,7 @@
       class: "form-control",
       placeholder: "Find an event..."
     %>
-      
+
       <%= submit_tag "Search", class: "btn search-btn" %>
       </div>
   <% end %>
@@ -26,14 +26,14 @@
     <div class="card-product">
       <div class="card-product-infos">
         <%= link_to event_path(event) do %>
-          <h2><%= event.name%></h2>
-          <p><%= event.date%></p>
+          <h2><i class="fas fa-calendar-check"></i>&ensp;&ensp;<%= event.name%></h2>
+          <p>&ensp;&ensp;<%= event.updated_at %></p>
         <% end %>
       </div>
     </div>
   <% end %>
   <div class="cover mb-4 d-flex align-items-center justify-content-center" >
-          <%= link_to "Add", new_event_path(@event), class: 'text-center', class: 'btn btn-add m-4'%> 
+          <%= link_to "Add", new_event_path(@event), class: 'text-center', class: 'btn btn-add m-4'%>
           </div>
 </div>
 </div>
