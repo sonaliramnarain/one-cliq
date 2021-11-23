@@ -231,3 +231,27 @@ agenda1 = Agenda.create!(start_time: DateTime.new(2021, 11, 23, 10,05 ),
                          user: subject1,
                          classroom: classroom1
 )
+
+agenda2 = Agenda.create!(start_time: DateTime.new(2021, 11, 24, 10,05 ),
+                         end_time: DateTime.new(2021, 11, 24, 10,05 ),
+                         user: subject3,
+                         classroom: classroom2
+)
+
+agenda3 = Agenda.create!(start_time: DateTime.new(2021, 11, 25, 10,05 ),
+                         end_time: DateTime.new(2021, 11, 25, 10,05 ),
+                         user: subject2,
+                         classroom: classroom4
+)
+
+agenda4 = Agenda.create!(start_time: DateTime.new(2021, 11, 23, 10,05 ),
+                         end_time: DateTime.new(2021, 11, 23, 10,05 ),
+                         user: subject2,
+                         classroom: classroom2
+)
+
+agenda5 = Agenda.create!(start_time: DateTime.new(2021, 11, 26, 17,00 ),
+                         end_time: DateTime.new(2021, 11, 26, 19,00 ),
+                         user: subject1,
+                         classroom: classroom1
+)
