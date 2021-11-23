@@ -7,6 +7,7 @@
     display: flex;
     border-radius: 15px;
     margin-top: 10px;
+
   }
 
 
@@ -85,3 +86,19 @@
  height: 200px;
  width: 200px;
  }
+
+ .card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgb(255, 243, 243);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgb(255, 254, 254);
+ 
+}
