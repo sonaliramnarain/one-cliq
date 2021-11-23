@@ -13,13 +13,9 @@ class AttendancesController < ApplicationController
     end
   end
 
-  def update
-   @attendance = Attendance.find(params[:id])
-    @attendance.update(attendance_params)
-
-    redirect_to attendance_path(@attendance)
-  end
-
+ def destroy
+    
+ end
  private
 
   def attendance_params
