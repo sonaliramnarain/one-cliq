@@ -6,7 +6,7 @@
 
   <div class= "bg-white rounded shadow h-100 card-body align-items-center py-5 form-new">
     <%= simple_form_for(@agenda) do |f| %>
-      <%= f.association :classroom %>
+      <%= f.association :classroom, label_method: :level, as: :select %>
       <div>
        <%= f.input :start_time, as: :datetime, html5: true %>
       </div>

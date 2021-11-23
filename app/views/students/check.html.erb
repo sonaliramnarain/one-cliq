@@ -1,0 +1,36 @@
+<br>
+<div class="student mb-4 d-flex align-items-center justify-content-center" >
+ <h1>Attendance</h1>
+</div>
+
+<div class="cover mb-4 d-flex align-items-center justify-content-center" >
+  <div class= "row ">
+    <div class ="col">
+     <% @students.each do |student| %>
+       <div class="card-product">
+         <img src= "<%= student.photo %>" />
+         <div class="card-product-infos">
+            <%= link_to  student_path(student) do %>
+             <h2><i class="fas fa-graduation-cap"></i>&ensp;&ensp;<%= student.name %></h2>
+             <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<%= student.classroom.level %></p>
+            <% end %>
+            <div class ="wrapper">
+              <% attendance = student.attendances.find{ |attendance| attendance.agenda == @agenda } %>
+              <% if attendance %>
+                <%= link_to attendance_path(attendance), method: :delete, remote: true do %>
+                  <i class="fas fa-check-square"></i>
+                <% end %>
+              <% else %>
+                <%= link_to agenda_student_attendances_path(@agenda, student), method: :post, remote: true do %>
+                  <i class="fas fa-times-circle"></i>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+ <%= link_to  %>

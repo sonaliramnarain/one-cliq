@@ -9,6 +9,13 @@ class StudentsController < ApplicationController
    end
   end
 
+  def check
+    console
+    @agenda = Agenda.find(params[:agenda_id])
+    @classroom = @agenda.classroom
+    @students = Student.where(classroom: @classroom)
+  end
+
   def create
    @student = Student.new(student_params)
    @student.parent = current_user
