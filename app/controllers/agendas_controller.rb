@@ -15,8 +15,12 @@ class AgendasController < ApplicationController
  def create
     @agenda = Agenda.new(agendas_params)
     @agenda.teacher = current_user
-    @agenda.save
+    raise
+    if @agenda.save
      redirect_to agendas_path
+    else
+      render :new
+    end
  end
 
   def update
@@ -34,7 +38,7 @@ class AgendasController < ApplicationController
  private
 
  def agendas_params
-    params.require(:agenda).permit(:start_time, :end_time)
+    params.require(:agenda).permit(:start_time, :end_time, :classroom)
  end
 
 end
