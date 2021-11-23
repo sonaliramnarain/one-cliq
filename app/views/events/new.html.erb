@@ -4,32 +4,21 @@
   </div>
 
     <div class= "bg-white rounded shadow h-100 card-body align-items-center py-5 form-new">
-        <%= form_for(@event) do |f| %>
+        <%= simple_form_for(@event) do |f| %>
          <div>
-           <%= f.label :name %>
-           <%= f.text_field :name %>
-         </div>
+           <%= f.input :name %>
 
-         <br>
+           <%= f.input :event_description %>
 
-         <div>
-           <%= f.label :event_description %>
-           <%= f.text_field :event_description%>
-         </div>
-
-         <br>
-
-         <div>
-           <%= f.label :additional_information %>
-           <%= f.text_field :additional_information%>
+           <%= f.input :additional_information %>
          </div>
          <br>
 
          <div>
-   <%= simple_form_for ([@event]), remote: true do |f| %>
-     <%= f.input :date, as: :date, html5: true, input_html: {class: 'form-input'} %>
+           <%= simple_form_for ([@event]), remote: true do |f| %>
+           <%= f.input :date, as: :date, html5: true, input_html: {class: 'form-input'} %>
          </div>
-         
+
 
          <div class= "d-flex align-items-center justify-content-center mb-4">
            <%= f.submit "Add event", class: 'btn btn-gradient' %>
@@ -39,5 +28,3 @@
           <% end %>
     </div>
 </div>
-  
-
