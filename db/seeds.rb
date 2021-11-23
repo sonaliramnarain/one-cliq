@@ -226,11 +226,8 @@ subject3 = User.create!(subject: "Biology",
                          is_teacher: true
 )
 
-agenda1 = Agenda.create!( date: "Monday",
-                         start_time:
-                         end_time:
-                         user:
-                         subject:
-                         classroom:
-
+agenda1 = Agenda.create!(start_time: DateTime.new(2021, 11, 23, 10,05 ),
+                         end_time: DateTime.new(2021, 11, 23, 10,05 ),
+                         user: subject1,
+                         classroom: classroom1
 )
