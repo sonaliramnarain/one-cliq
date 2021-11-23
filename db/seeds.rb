@@ -225,3 +225,4 @@ subject3 = User.create!(subject: "Biology",
                          password: "123456",
                          is_teacher: true
 )
+
