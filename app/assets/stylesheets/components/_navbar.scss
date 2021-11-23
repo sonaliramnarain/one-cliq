@@ -1,6 +1,10 @@
 .navbar-logo {
   justify-content: space-between;
   background:  #7bbbbd;
+  border: 4px solid;
+  border-color: whitesmoke;
+ padding: 4px;
+ border-image: url(border.png) 30 round;
   
 }
 
@@ -27,5 +31,6 @@ border-radius: 0px;
 
 .navbar-brand img{
   box-shadow: 1px 1px 1px #025c61;
+  padding-left: 6px;
 }
 
