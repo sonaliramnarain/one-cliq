@@ -11,7 +11,7 @@ class AttendancesController < ApplicationController
     @attendance.agenda = agenda
 
     if @attendance.save
-     redirect_to check_agenda_students_path(agenda)
+     redirect_to check_agenda_students_path(@agenda)
     end
   end
 

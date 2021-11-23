@@ -15,7 +15,7 @@
              <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<%= student.classroom.level %></p>
             <% end %>
             <div class ="wrapper">
-              <% attendance = student.attendances.find{ |attendance| attendance.agenda == @agenda } %>
+               <% attendance = student.attendances.find{ |attendance| attendance.agenda == @agenda } %>
               <% if attendance %>
                 <%= link_to attendance_path(attendance), method: :delete, remote: true do %>
                   <i class="fas fa-check-square"></i>
