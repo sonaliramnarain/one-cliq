@@ -213,8 +213,8 @@ subject1 = User.create!(subject: "Physics",
 )
 
 subject2 = User.create!(subject: "Computer Science",
-                        name: "Lola",
-                        email: "Lola@gmail.com",
+                         name: "Lola",
+                         email: "Lola@gmail.com",
                          password: "123456",
                          is_teacher: true
 )
@@ -224,4 +224,13 @@ subject3 = User.create!(subject: "Biology",
                          email: "hans@gmail.com",
                          password: "123456",
                          is_teacher: true
+)
+
+agenda1 = Agenda.create!( date: "Monday",
+                         start_time:
+                         end_time:
+                         user:
+                         subject:
+                         classroom:
+
 )
