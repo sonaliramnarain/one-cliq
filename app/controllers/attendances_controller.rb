@@ -13,18 +13,6 @@ class AttendancesController < ApplicationController
     end
   end
 
-  def new
-    @attendance = Attendance.new
-  end
-
-  def show
-    @attendance = Attendance.find(params[:id])
-  end
-
-  def edit
-   @attendance = Attendance.find(params[:id])
-  end
-
   def update
    @attendance = Attendance.find(params[:id])
     @attendance.update(attendance_params)

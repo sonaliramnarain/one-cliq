@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     resources :students, only: [:index, :show]
    end
   #end
-  resources :agendas#, only: [:edit, :update, :destroy]
+  resources :agendas do#, only: [:edit, :update, :destroy]
+   resources :students, only: :index
+  end
   resources :events
   resources :students do
     resources :attendances, only: [:new, :create, :index, :show]
