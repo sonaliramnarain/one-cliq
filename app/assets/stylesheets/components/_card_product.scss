@@ -7,7 +7,6 @@
     display: flex;
     border-radius: 15px;
     margin-top: 10px;
-
   }
 
 
@@ -33,7 +32,6 @@
 
   .card-product .card-product-infos {
     padding: 16px;
-
   }
 
   .row .col .card-product:hover{
@@ -49,6 +47,7 @@
  .card img {
  height: 200px;
  width: 200px;
+ 
  }
 
  .card-category {
@@ -61,8 +60,10 @@
   color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgb(255, 243, 243);
+  text-shadow: 1px 1px 3px rgb(250, 250, 250);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgb(255, 254, 254);
 
+  box-shadow: 15px 15px 20px rgb(17, 17, 17);
+ 
 }
+
