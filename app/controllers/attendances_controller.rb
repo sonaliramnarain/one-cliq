@@ -2,7 +2,7 @@ class AttendancesController < ApplicationController
   def index
    @attendances = Attendance.all.order(created_at: :desc)
   end
- 
+
   def create
     student = Student.find(params[:student_id])
     agenda = Agenda.find(params[:agenda_id])
@@ -11,14 +11,16 @@ class AttendancesController < ApplicationController
     @attendance.agenda = agenda
 
     if @attendance.save
-     redirect_to check_agenda_students_path(@agenda)
+      redirect_to controller: 'students', action: 'check', anchor: "student-#{student.id}"
+
     end
   end
 
   def destroy
     @attendance = Attendance.find(params[:id])
-    @attendance = @attendance.destroy
-    redirect_to check_agenda_students_path(@attendance.agenda)
+    if @attendance.destroy
+      redirect_to controller: 'students', action: 'check', agenda_id: @attendance.agenda.id, anchor: "student-#{@attendance.student.id}"
+    end
   end
  private
 
