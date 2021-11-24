@@ -9,10 +9,8 @@ class AttendancesController < ApplicationController
     @attendance = Attendance.new
     @attendance.student = student
     @attendance.agenda = agenda
-
     if @attendance.save
       redirect_to controller: 'students', action: 'check', anchor: "student-#{student.id}"
-
     end
   end
 
