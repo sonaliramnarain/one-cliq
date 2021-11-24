@@ -7,7 +7,7 @@
   <div class= "row ">
     <div class ="col">
      <% @students.each do |student| %>
-       <div class="card-product">
+       <div id="student-<%= student.id %>" class="card-product">
          <img src= "<%= student.photo %>" />
          <div class="card-product-infos">
             <%= link_to  student_path(student) do %>
@@ -15,7 +15,7 @@
              <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<%= student.classroom.level %></p>
             <% end %>
             <div class ="wrapper">
-              <% attendance = student.attendances.find{ |attendance| attendance.agenda == @agenda } %>
+               <% attendance = student.attendances.find{ |attendance| attendance.agenda == @agenda } %>
               <% if attendance %>
                 <%= link_to attendance_path(attendance), method: :delete, remote: true do %>
                   <i class="fas fa-check-square"></i>
@@ -32,5 +32,3 @@
     </div>
   </div>
 </div>
-
- <%= link_to  %>
