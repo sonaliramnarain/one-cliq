@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-logo">
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "logo", alt: "logo" %>
   <% end %>
 
@@ -11,18 +11,21 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-      
+
+        <li class="nav-item active">
+          <%= link_to "Home", root_path, class: "nav-link" %>
+        </li>
         <li class="nav-item">
-          <%= link_to " | Home |", "#", class: "nav-link" %>
-        </li> 
-       
-        
-        <li class="nav-item">
-          <%= link_to "| Event |", "#", class: "nav-link" %>
+          <%= link_to "Lectures", agendas_path, class: "nav-link" %>
+
         </li>
         
         <li class="nav-item">
-          <%= link_to "| List of classe |", "#", class: "nav-link" %>
+          <%= link_to "Your classes", classrooms_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Events", events_path, class: "nav-link" %>
+
         </li>
       
         <li class="nav-item dropdown">
