@@ -12,6 +12,7 @@ class AttendancesController < ApplicationController
 
     if @attendance.save
       redirect_to controller: 'students', action: 'check', anchor: "student-#{student.id}"
+
     end
   end
 
