@@ -2,6 +2,7 @@
   <div class= "d-flex align-items-center justify-content-center mb-4">
 <h2>Add a new Student to this class👩🏼‍🎓</h2>
   </div>
+   
     <div class= "bg-white rounded shadow h-100 card-body align-items-center py-5 form-new">
         <%= form_for(@student) do |f| %>
          <div>
@@ -13,7 +14,7 @@
            <%= f.label :age %>
            <%= f.text_field :age%>
          </div>
-         <br>       
+         <br>
           <div>
            <%= f.label :address %>
            <%= f.text_field :address%>
