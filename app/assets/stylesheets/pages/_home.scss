@@ -1,11 +1,12 @@
 // Specific CSS for your home-page
 #contact{
   padding: 30px;
-  border: 6px solid#025c61;
-  box-shadow: 10px 10px 0  #4ea2a5;
-  border-radius: 10px;
+  border: 10px solid#025c61;
+  box-shadow: 10px 5px 0  #4ea2a5;
+  border-radius: 15px;
   position: relative;
- background-color: #F9F9F9;
+  background-color: #F9F9F9;
+  width:fit-content;
 }
 
 .button {
@@ -19,13 +20,21 @@
 
 .container1 {
  background-color:#D7E9F7;
+
+
 }
 
 .container2 {
  background-color:#D7E9F7;
+
+
+
 }
 
 #features {
  background-color:#91c2c7f6;
-
+ border: 6px solid;
+ padding: 5px;
+ border-image: url(border.png) 30 round;
 }
+

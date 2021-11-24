@@ -11,18 +11,23 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
+
         <li class="nav-item active">
           <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "Lectures", agendas_path, class: "nav-link" %>
+
         </li>
+        
         <li class="nav-item">
           <%= link_to "Your classes", classrooms_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "Events", events_path, class: "nav-link" %>
+
         </li>
+      
         <li class="nav-item dropdown">
           <%= image_tag "me.jpeg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
