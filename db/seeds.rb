@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Attendance.destroy_all
 Agenda.destroy_all
 Classroom.destroy_all
 Student.destroy_all
@@ -281,3 +282,7 @@ agenda5 = Agenda.create!(start_time: DateTime.new(2021, 11, 26, 17,00 ),
                          teacher: subject1,
                          classroom: classroom1
 )
+
+agenda1.classroom.students do |student|
+  Attendance.create!(agenda: agenda1, student: student)
+end

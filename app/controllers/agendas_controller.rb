@@ -9,7 +9,6 @@ class AgendasController < ApplicationController
 
  def new
    @agenda = Agenda.new
-   @agenda.save
  end
 
  def create
