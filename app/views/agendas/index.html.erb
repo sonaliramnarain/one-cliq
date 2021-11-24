@@ -1,10 +1,15 @@
+<body background= "https://media.istockphoto.com/vectors/online-education-and-elearning-via-digital-device-vector-id1168910967?k=20&m=1168910967&s=612x612&w=0&h=fHa08_LlwjeeWIqxOy0YDSmH-bBQfDzicK2ogb8ALQc=">
 <div class="cover mb-4 d-flex align-items-center justify-content-center" >
-  <h1><strong>Lecture</strong></h1>
+
+
+  
+  <h1 id="lectures_index"></h1>
+  
 </div>
 
 <% @agendas.each do |agenda| %>
   <div class="mr-10 d-flex align-items-center justify-content-center">
-   <h3><%= agenda.start_time.strftime("%A:%F") %></h3>
+   <h3><kbd><%= agenda.start_time.strftime("%A:%F") %></kbd></h3>
  </div>
  <div class="cover mb-4 d-flex align-items-center justify-content-center" >
    <div class= "row ">

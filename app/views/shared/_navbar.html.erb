@@ -15,19 +15,19 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
 
-        <li class="nav-item active">
-          <%= link_to "Home", root_path, class: "nav-link" %>
+        <li class="nav-item">
+          <%= link_to " | Home |", root_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Lectures", agendas_path, class: "nav-link" %>
+          <%= link_to "| Lectures |", agendas_path, class: "nav-link" %>
 
         </li>
 
         <li class="nav-item">
-          <%= link_to "Your classes", classrooms_path, class: "nav-link" %>
+          <%= link_to "| Your classes |", classrooms_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Events", events_path, class: "nav-link" %>
+          <%= link_to "| Events |", events_path, class: "nav-link" %>
 
         </li>
 
