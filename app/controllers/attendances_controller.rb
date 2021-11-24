@@ -19,7 +19,7 @@ class AttendancesController < ApplicationController
     student = @attendance.student
     if @attendance.destroy
       # redirect_to controller: 'students', action: 'check', agenda_id: @attendance.agenda.id, anchor: "student-#{@attendance.student.id}"
-      redirect_to check_agenda_students_path(@attendance.agenda, anchor: "student-#{student.id}"), notice: "Message send to #{student.parent.name}: 'Your child is missing from school!'"
+      redirect_to check_agenda_students_path(@attendance.agenda, anchor: "student-#{student.id}"), notice: "Message send to #{student.parent.name}: 'Your child is missing from school!👮'"
     end
   end
  private
