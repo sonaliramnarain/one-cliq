@@ -1,4 +1,7 @@
-<div class="cover py-4 d-flex align-items-center justify-content-center" >
+
+<div class ="school-background">
+<div class="cover mb-4 d-flex align-items-center justify-content-center" >
+
 
 
 
@@ -7,8 +10,8 @@
 </div>
 
 <div class= "row justify-content-center ">
-  <% @agendas.each do |agenda| %>
   <div class ="col-10">
+  <% @agendas.each do |agenda| %>
     <div class="mr-10 d-flex align-items-center justify-content-center">
      <h3><kbd><%= agenda.start_time.strftime("%A %d %B") %></kbd></h3>
    </div>
@@ -18,64 +21,18 @@
               <div class="d-flex justify-content-between align-items-center">
                 <div>
                   <h2><%= link_to agenda.teacher.subject, agenda_path(agenda) %></h2>
-                    <p>Begin: <%= agenda.start_time.strftime("%H:%M") %> - End:<%= agenda.end_time.strftime("%H:%M") %> </p>
-                    <p>Classroom: <%= agenda.classroom.level %></p>
+                    <p><strong>From: <%= agenda.start_time.strftime("%H:%M") %> - To: <%= agenda.end_time.strftime("%H:%M") %> </strong></p>
+                    <p><strong><%= agenda.classroom.level %></strong></p>
                 </div>
                 <%= link_to "Attendance", check_agenda_students_path(agenda), class: "btn btn-add mt-0"%>
               </div>
            </div>
          </div>
        </div>
-  </div>
   <% end %>
+  </div>
 </div>
-<div class="cover mb-4 d-flex align-items-center justify-content-center" >
+<div class="cover d-flex align-items-center justify-content-center" >
   <%= link_to "Add", new_agenda_path(@agenda), class: 'text-center', class: 'btn btn-add m-4'%>
 </div>
-<!--<div class="cover mb-4 d-flex align-items-center justify-content-center" >
- <div class= "row ">
-   <div class ="col">
-      <div class="card-product">
-        <div class="card-product-infos">
-          <h2><%= link_to 'Tuesday', agendas_path(@agenda) %></h2>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
-
-<div class="cover mb-4 d-flex align-items-center justify-content-center" >
- <div class= "row ">
-   <div class ="col">
-      <div class="card-product">
-        <div class="card-product-infos">
-          <h2><%= link_to 'Wednesday', agendas_path(@agenda) %></h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="cover mb-4 d-flex align-items-center justify-content-center" >
- <div class= "row ">
-   <div class ="col">
-      <div class="card-product">
-        <div class="card-product-infos">
-          <h2><%= link_to 'Thursday', agendas_path(@agenda) %></h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="cover mb-4 d-flex align-items-center justify-content-center" >
- <div class= "row ">
-   <div class ="col">
-      <div class="card-product">
-        <div class="card-product-infos">
-          <h2><%= link_to 'Friday', agendas_path(@agenda) %></h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>-->

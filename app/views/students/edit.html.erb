@@ -1,27 +1,20 @@
+<div class ="school-background">
 <div class= "container py-5 mb-40">
   <div class= "d-flex align-items-center justify-content-center mb-4">
   <h2>Update Student profile 👩🏼‍🎓 </h2>
   </div>
     <div class= "bg-white rounded shadow h-100 card-body align-items-center py-5 form-new">
-        <%= form_for(@student) do |f| %>
-          <div>
-          <%= f.label :name %>
-          <%= f.text_field :name %>
-          </div>
-          <br>
-         <div>
-           <%= f.label :age %>
-           <%= f.text_field :age%>
-         </div>
-         <br>       
-          <div>
-           <%= f.label :address %>
-           <%= f.text_field :address%>
-         </div>
+        <%= simple_form_for(@student) do |f| %>
+          <%= f.input :name %>
+          <%= f.input :address %>
+          <%= f.input :age %>
+          <%= f.input :remark %>
+          <%= f.association :classroom, label_method: :level, as: :select %>
           <div class= "d-flex align-items-center justify-content-center mb-4">
               <%= f.submit "update", class: 'btn btn-gradient' %>
               <%= link_to 'Cancel', :back, class: 'btn btn-ghost' %>
           </div>
       <% end %>
     </div>
+</div>
 </div>

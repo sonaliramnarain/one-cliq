@@ -11,9 +11,17 @@
     background: #025c61;
     color:rgb(251, 234, 208);
     float:left;
+    border: 1px solid #025c61;
     border-radius: 15px;
     // width: 500px;
     margin-top: 30px;
+   }
+
+   .btn-outline-add{
+    color:#025c61;
+    float:left;
+    border: 1px solid #025c61;
+    border-radius: 15px;
    }
 
    .btn-ghost{
@@ -52,3 +60,17 @@
     margin-bottom: 20px;
 
    }
+
+.fas{
+  margin-top: 10px;
+}
+
+   .fas.attendance-present {
+     font-size: 1.5rem;
+     color: green;
+   }
+
+   .fas.attendance-absent {
+    font-size: 1.5rem;
+    color: rgb(179, 27, 27);
+  }
