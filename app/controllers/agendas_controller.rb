@@ -1,6 +1,6 @@
 class AgendasController < ApplicationController
  def index
-   @agendas = Agenda.all
+   @agendas = Agenda.order(:start_time)
  end
 
   def show
