@@ -10,7 +10,6 @@ class StudentsController < ApplicationController
   end
 
   def check
-    console
     @agenda = Agenda.find(params[:agenda_id])
     @classroom = @agenda.classroom
     @students = Student.where(classroom: @classroom)
