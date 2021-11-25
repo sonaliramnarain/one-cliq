@@ -1,34 +1,38 @@
+<div class="student-index  py-4">
 <br>
 <div class="student mb-4 d-flex align-items-center justify-content-center" >
  <h1>Attendance</h1>
 </div>
 
 <div class="cover mb-4 d-flex align-items-center justify-content-center" >
-  <div class= "row ">
-    <div class ="col">
+  <div class= "row justify-content-center w-100">
+    <div class ="col-10">
      <% @students.each do |student| %>
+     <%= link_to  student_path(student) do %>
        <div id="student-<%= student.id %>" class="card-product">
          <img src= "<%= student.photo %>" />
-         <div class="card-product-infos">
-            <%= link_to  student_path(student) do %>
+         <div class="card-product-infos d-flex justify-content-between w-100">
+             <div>
              <h2><i class="fas fa-graduation-cap"></i>&ensp;&ensp;<%= student.name %></h2>
              <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<%= student.classroom.level %></p>
-            <% end %>
+            </div>
             <div class ="wrapper">
                <% attendance = student.attendances.find{ |attendance| attendance.agenda == @agenda } %>
               <% if attendance %>
                 <%= link_to attendance_path(attendance), method: :delete, remote: true do %>
-                  <i class="fas fa-check-square"></i>
+                  <i class="fas fa-check-square attendance-present"></i>
                 <% end %>
               <% else %>
                 <%= link_to agenda_student_attendances_path(@agenda, student), method: :post, remote: true do %>
-                  <i class="fas fa-times-circle"></i>
+                  <i class="fas fa-times-circle attendance-absent"></i>
                 <% end %>
               <% end %>
             </div>
           </div>
         </div>
+         <% end %>
       <% end %>
     </div>
   </div>
+</div>
 </div>
