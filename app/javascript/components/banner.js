@@ -37,7 +37,26 @@ const loadDynamicBannerText = () => {
     });
   }
 
+  const listsTitle = document.getElementById('lists_index');
+  if (listsTitle) {
+    new Typed('#lists_index', {
+      strings: ["Student Lists"],
+      typeSpeed: 500,
+      loop: true
+    });
+  }
+
+  const attendancesTitle = document.getElementById('attendances_index');
+  if (attendancesTitle) {
+    new Typed('#attendances_index', {
+      strings: ["Attendance"],
+      typeSpeed: 500,
+      loop: true
+    });
+  }
+
 
 }
 
 export { loadDynamicBannerText };
+
