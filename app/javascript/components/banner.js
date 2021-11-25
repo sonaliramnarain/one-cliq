@@ -31,7 +31,7 @@ const loadDynamicBannerText = () => {
   const lecturesTitle = document.getElementById('lectures_index');
   if (lecturesTitle) {
     new Typed('#lectures_index', {
-      strings: ["Classroom Lists"],
+      strings: ["Lectures"],
       typeSpeed: 500,
       loop: true
     });

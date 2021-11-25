@@ -16,6 +16,7 @@
              <h2><i class="fas fa-graduation-cap"></i>&ensp;&ensp;<%= student.name %></h2>
              <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<%= student.classroom.level %></p>
             </div>
+
             <div class ="wrapper">
                <% attendance = student.attendances.find{ |attendance| attendance.agenda == @agenda } %>
               <% if attendance %>
