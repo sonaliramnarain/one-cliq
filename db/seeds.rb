@@ -282,7 +282,3 @@ agenda5 = Agenda.create!(start_time: DateTime.new(2021, 11, 26, 17,00 ),
                          teacher: subject1,
                          classroom: classroom1
 )
-
-agenda1.classroom.students.each do |student|
-  Attendance.create!(agenda: agenda1, student: student)
-end
