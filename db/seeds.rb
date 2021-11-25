@@ -47,7 +47,7 @@ Sonali = Student.create( name:"Sonali Ramnarain",
                          parent: parent1
 )
 
-Hans = Student.create( name:"Hansvin Venetheethan",
+Hans = Student.create( name:"Hans Titan",
                         photo: "https://avatars.githubusercontent.com/u/90834561?v=4",
                         classroom: classroom1,
                         age: 19,
