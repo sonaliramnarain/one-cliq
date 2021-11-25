@@ -36,7 +36,7 @@ parent5= User.create!(email:"mranas@gmail.com",
 
 
 
-classroom1 = Classroom.create!(level: "Grade 7")
+classroom1 = Classroom.create!(level: "#Batch 712")
 Sonali = Student.create( name:"Sonali Ramnarain",
                          photo: "https://avatars.githubusercontent.com/u/89387735?v=4",
                          classroom: classroom1,
@@ -68,12 +68,12 @@ Inna = Student.create!( name:"Inna Goordoyal",
 )
 
 Billy = Student.create( name:"Billy Perle",
-                        photo: "https://ca.slack-edge.com/T02NE0241-U026TLSDJNN-89b34fed5cf6-72",
+                        photo: "https://media-exp1.licdn.com/dms/image/C5603AQE4D747wziTnA/profile-displayphoto-shrink_400_400/0/1633431591305?e=1643241600&v=beta&t=YcqqXV_n4-nmgBHlF6Dwvu7RsYnAwd__LM-uo_Hy2_A",
                         classroom: classroom1,
                         age: 18,
                         address:"Bel Ombre",
                         contact: "54569075",
-                        remark: "Not very punctual",
+                        remark: "Not very punctual, homework not done.",
                         parent: parent4
 )
 Dhanistha = Student.create( name:"Dhanistha Goordoyal",
@@ -82,7 +82,7 @@ Dhanistha = Student.create( name:"Dhanistha Goordoyal",
                             age: 19,
                             address:"Le Hochet Terre Rouge",
                             contact: "54569875",
-                            remark: "Not serious in class",
+                            remark: "Not serious in class and always singing.",
                             parent: parent3
 
 )
@@ -90,7 +90,7 @@ Dushveer = Student.create!( name:"Dushveer Sumaruth",
                          classroom: classroom1,
                          photo: "https://avatars.githubusercontent.com/u/90179824?v=4",
                          age: 18,
-                         address:"...",
+                         address:"Quatre Bornes",
                          contact: "54569870",
                          remark: "Never focus in class",
                          parent: parent1
@@ -110,7 +110,7 @@ Houzair = Student.create!( name:"Houzair Koussa",
                          age: 19,
                          address:"Grand Baie",
                          contact: "54569975",
-                         remark: "Always late",
+                         remark: "Always late in class. Missed 2 class test",
                          parent: parent4
 )
 Yaasir = Student.create!( name:"Yaasir Mohammad",
@@ -135,7 +135,7 @@ Kavish = Student.create( name:"Kavish Neertheen",
                          classroom: classroom1,
                          photo: "https://avatars.githubusercontent.com/u/90825809?v=4",
                          age: 14,
-                         address:"...",
+                         address:"Mt Blanche",
                          contact: "54569875",
                          remark: "Always late, day dreaming",
                          parent: parent1
@@ -151,7 +151,7 @@ Arvind = Student.create( name:"Sharma Gowreea",
 )
 
 
-classroom2 = Classroom.create!(level: "Grade 8")
+classroom2 = Classroom.create!(level: "#Batch 710")
 
 Anas = Student.create(   name:"Anas Soobratty",
                          classroom: classroom2,
@@ -184,7 +184,7 @@ Christian2 = Student.create( name:" Christian Bongard",
 Julie = Student.create( name:"Julie Miguel",
                          classroom: classroom2,
                          photo: "https://avatars.githubusercontent.com/u/85569294?v=4",
-                         age: 15,
+                         age: 18,
                          address:"Moka",
                          contact: "54569875",
                          remark: "not very punctual",
@@ -193,7 +193,7 @@ Julie = Student.create( name:"Julie Miguel",
 Vilorshini = Student.create( name:"Vilorshini Ramsamy",
                          classroom: classroom2,
                          photo: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1633029831/g1asevhbypcm2odezogj.jpg",
-                         age: 14,
+                         age: 18,
                          address:"Beau Bassin",
                          contact: "54569875",
                          remark: "not very punctual",
@@ -211,8 +211,8 @@ Yogaisan = Student.create( name:"Yogaisan Ramasawny",
 Yudish = Student.create( name:"Yudish Nundun",
                          classroom: classroom2,
                          photo: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1631534383/yovgb3ezfscdjuitgkqe.jpg",
-                         age: 12,
-                         address:"...",
+                         age: 18,
+                         address:"Chemin Grenier",
                          contact: "54569875",
                          remark: "always missing",
                          parent: parent1
@@ -220,19 +220,17 @@ Yudish = Student.create( name:"Yudish Nundun",
 )
 
 
-classroom3 = Classroom.create!(level: "Grade 9")
+classroom3 = Classroom.create!(level: "#Batch 614")
 
-classroom4 = Classroom.create!(level: "Grade 10")
-
-
-classroom5 = Classroom.create!(level: "Grade 11")
-
-classroom6 = Classroom.create!(level: "Grade 12")
-
-classroom7 = Classroom.create!(level: "Grade 13")
+classroom4 = Classroom.create!(level: "#Batch 615")
 
 
-subject1 = User.create!(subject: "Physics",
+classroom5 = Classroom.create!(level: "#Batch 714")
+
+
+
+
+subject1 = User.create!(subject: "Web Developement",
                          name: "Steve",
                          email: "steve@gmail.com",
                          password: "123456",
@@ -246,39 +244,40 @@ subject2 = User.create!(subject: "Computer Science",
                          is_teacher: true
 )
 
-subject3 = User.create!(subject: "Biology",
-                         name: "Hans",
-                         email: "hans@gmail.com",
-                         password: "123456",
-                         is_teacher: true
-)
 
-agenda1 = Agenda.create!(start_time: DateTime.new(2021, 11, 23, 10,05 ),
-                         end_time: DateTime.new(2021, 11, 23, 10,05 ),
+
+agenda1 = Agenda.create!(start_time: DateTime.new(2021, 11, 26, 18,15 ),
+                         end_time: DateTime.new(2021, 11, 26, 20,15 ),
                          teacher: subject1,
                          classroom: classroom1
 )
 
-agenda2 = Agenda.create!(start_time: DateTime.new(2021, 11, 24, 10,05 ),
-                         end_time: DateTime.new(2021, 11, 24, 10,05 ),
-                         teacher: subject3,
-                         classroom: classroom2
-)
-
-agenda3 = Agenda.create!(start_time: DateTime.new(2021, 11, 25, 10,05 ),
-                         end_time: DateTime.new(2021, 11, 25, 10,05 ),
-                         teacher: subject2,
-                         classroom: classroom4
-)
-
-agenda4 = Agenda.create!(start_time: DateTime.new(2021, 11, 23, 10,05 ),
-                         end_time: DateTime.new(2021, 11, 23, 10,05 ),
-                         teacher: subject2,
-                         classroom: classroom2
-)
-
-agenda5 = Agenda.create!(start_time: DateTime.new(2021, 11, 26, 17,00 ),
-                         end_time: DateTime.new(2021, 11, 26, 19,00 ),
+agenda2 = Agenda.create!(start_time: DateTime.new(2021, 11, 29, 10,05 ),
+                         end_time: DateTime.new(2021, 11, 29, 13,05 ),
                          teacher: subject1,
-                         classroom: classroom1
+                         classroom: classroom2
+)
+
+agenda2 = Agenda.create!(start_time: DateTime.new(2021, 11, 30, 11,05 ),
+                         end_time: DateTime.new(2021, 11, 30, 10,05 ),
+                         teacher: subject1,
+                         classroom: classroom2
+)
+
+agenda2 = Agenda.create!(start_time: DateTime.new(2021, 12, 01, 13,05 ),
+                         end_time: DateTime.new(2021, 12, 01, 14,30 ),
+                         teacher: subject1,
+                         classroom: classroom2
+)
+
+agenda2 = Agenda.create!(start_time: DateTime.new(2021, 12, 02, 11,05 ),
+                         end_time: DateTime.new(2021, 12, 02, 13,05 ),
+                         teacher: subject1,
+                         classroom: classroom2
+)
+
+agenda2 = Agenda.create!(start_time: DateTime.new(2021, 12, 03, 15,05 ),
+                         end_time: DateTime.new(2021, 12, 03, 16,05 ),
+                         teacher: subject1,
+                         classroom: classroom2
 )
