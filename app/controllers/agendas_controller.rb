@@ -1,6 +1,6 @@
 class AgendasController < ApplicationController
  def index
-   @agendas = Agenda.all
+   @agendas = Agenda.order(:start_time)
  end
 
   def show
@@ -30,7 +30,7 @@ class AgendasController < ApplicationController
  def destroy
     @agenda = Agenda.find(params[:id])
     @agenda.destroy
-    redirect_to agenda_path
+    redirect_to agendas_path
  end
 
  private
