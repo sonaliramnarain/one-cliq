@@ -281,3 +281,34 @@ agenda2 = Agenda.create!(start_time: DateTime.new(2021, 12, 03, 15,05 ),
                          teacher: subject1,
                          classroom: classroom2
 )
+
+
+
+
+event1 = Event.create!(name: "Certification",
+                        event_description: "Test",
+                        additional_information: "Please don't cheat ;)",
+                        date: DateTime.new(2021, 12, 10, 18, 15),
+                        teacher: subject1
+)
+
+event2 = Event.create!(name: "BBQ Night",
+                        event_description: "Be Present",
+                        additional_information: "Non-Stop Karoke",
+                        date: DateTime.new(2021, 12, 06, 18, 15),
+                        teacher: subject1
+)
+
+event3 = Event.create!(name:"Career-Week",
+                        event_description: "Mandatory Event",
+                        additional_information: "career week will be share with Le Wagon Casablanca, an opportunity to meet some talents and speakers from all around the world.",
+                        date: DateTime.new(2021, 11, 29, 10 ,05),
+                        teacher: subject1
+)
+
+event4 = Event.create!(name:"Demo-Day",
+                        event_description: "Jour J",
+                        additional_information: "Be prepared to see the project of Batch 712 at 18:15",
+                        date: DateTime.new(2021, 11, 26, 18,15),
+                        teacher: subject1
+)
