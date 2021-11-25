@@ -1,4 +1,4 @@
-<div class="student-index  py-4">
+<div class="school-background py-4">
 <br>
 <div class="student mb-4 d-flex align-items-center justify-content-center" >
  <h1>Attendance</h1>
@@ -20,9 +20,32 @@
             <div class ="wrapper">
                <% attendance = student.attendances.find{ |attendance| attendance.agenda == @agenda } %>
               <% if attendance %>
-                <%= link_to attendance_path(attendance), method: :delete, remote: true do %>
+                <!-- Button trigger modal -->
+                <%= link_to '', data: { toggle: "modal", target: "#exampleModal" } do %>
                   <i class="fas fa-check-square attendance-present"></i>
                 <% end %>
+
+
+                 <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                       If you confirm, a message will be send to the parent <%= student.parent.name %>: "Your child is missing from school!👮"
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-add m-4" data-dismiss="modal">Close</button>
+                        <%= link_to 'Confirm', attendance_path(attendance), method: :delete, class: 'btn btn-add m-0', remote: true %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               <% else %>
                 <%= link_to agenda_student_attendances_path(@agenda, student), method: :post, remote: true do %>
                   <i class="fas fa-times-circle attendance-absent"></i>
