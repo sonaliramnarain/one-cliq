@@ -12,9 +12,9 @@ Student.destroy_all
 Event.destroy_all
 User.destroy_all
 
-parent1= User.create!(email:"mrssonali@gmail.com",
+parent1= User.create!(email:"mrsbeekun@gmail.com",
                       password: "s12345",
-                      name: "Mrs Ramnarain",
+                      name: "Mrs Beekun",
 )
 
 parent2= User.create!(email:"mrhansV@gmail.com",
@@ -102,7 +102,7 @@ Mozaffar = Student.create!( name:"Mozaffar Beekun",
                          address:"Port-Louis",
                          contact: "54569875",
                          remark: "Disobedient",
-                         parent: parent2
+                         parent: parent1
 )
 Houzair = Student.create!( name:"Houzair Koussa",
                          classroom: classroom1,
