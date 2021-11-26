@@ -4,3 +4,22 @@
   right: 16px;
   z-index: 1000;
 }
+
+.alert-dismissible{
+ background-color: #F4A9A8;
+ padding: 10px;
+ margin-top: 15px;
+ height: 65px;
+ border-color: #ffd1d5;
+ border-radius: 5px;
+ width: 480px;
+ text-align: auto;
+}
+
+.alert-info{
+ color: black;
+}
+
+.alert-warning {
+ margin-top: 3rem;
+}
