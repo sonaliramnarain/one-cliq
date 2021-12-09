@@ -12,10 +12,15 @@ body {
     color: var(--body);
 }
 
-h1,h2,h3,h4,h5,h6,
+h1,h2,h3,h4,h5,
 .display-4 {
     color: var(--dark);
     font-weight: 700;
+   
+ h6,
+ .display-6{
+    font-family: serif;
+ }
    
 }
 
